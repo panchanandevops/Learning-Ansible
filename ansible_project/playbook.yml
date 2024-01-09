@@ -1,24 +1,29 @@
 ---
+# Playbook to configure Apache on different OS
+
 - name: Configure Apache on Ubuntu
   hosts: ubuntu_machine
   become: true
+  # Apply the Apache role for Ubuntu
   roles:
     - role: apache_ubuntu
       tags:
-        - apache_ubuntu
+        - apache_ubuntu # Tags for better organization and selective execution
 
 - name: Configure Apache on Windows
   hosts: windows_machine
   become: true
+  # Apply the Apache role for Windows
   roles:
     - role: apache_windows
       tags:
-        - apache_windows
+        - apache_windows # Tags for better organization and selective execution
 
 - name: Configure Apache on CentOS
   hosts: centos_machine
   become: true
+  # Apply the Apache role for CentOS
   roles:
     - role: apache_centos
       tags:
-        - apache_centos
+        - apache_centos # Tags for better organization and selective execution

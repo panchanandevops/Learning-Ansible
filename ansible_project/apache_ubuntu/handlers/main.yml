@@ -1,4 +1,6 @@
 ---
+# Handler to restart the Apache service on Ubuntu
+
 - name: Restart Apache on Ubuntu
   ansible.builtin.service:
     name: apache2

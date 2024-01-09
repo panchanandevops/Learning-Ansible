@@ -1,9 +1,14 @@
 ---
+# Install Apache on CentOS and copy custom index.html
+
 - name: Install Apache on CentOS
   ansible.builtin.package:
     name: httpd
     state: present
+
   ansible.builtin.copy:
     src: templates/index.html.j2
     dest: /var/www/html/index.html
+
+  # Notify the 'Restart Apache' handler
   notify: Restart Apache

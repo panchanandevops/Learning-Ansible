@@ -1,4 +1,6 @@
 ---
+# Handler to restart the Apache service on Windows
+
 - name: Restart Apache on Windows
   ansible.builtin.win_service:
     name: Apache2.4

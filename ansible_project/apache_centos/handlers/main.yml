@@ -1,4 +1,5 @@
 ---
+# Handler to restart the Apache service on CentOS
 - name: Restart Apache on CentOS
   ansible.builtin.service:
     name: httpd
