@@ -1,0 +1,7 @@
+---
+- name: Install Apache on Windows
+  ansible.builtin.win_chocolatey:
+    name: apache-httpd
+  ansible.builtin.copy:
+    src: templates/index.html.j2
+    dest: C:\Apache24\htdocs\index.html

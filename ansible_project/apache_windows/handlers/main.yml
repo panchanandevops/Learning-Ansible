@@ -1,0 +1,5 @@
+---
+- name: Restart Apache on Windows
+  ansible.builtin.win_service:
+    name: Apache2.4
+    state: restarted

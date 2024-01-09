@@ -1,0 +1,24 @@
+---
+- name: Configure Apache on Ubuntu
+  hosts: ubuntu_machine
+  become: true
+  roles:
+    - role: apache_ubuntu
+      tags:
+        - apache_ubuntu
+
+- name: Configure Apache on Windows
+  hosts: windows_machine
+  become: true
+  roles:
+    - role: apache_windows
+      tags:
+        - apache_windows
+
+- name: Configure Apache on CentOS
+  hosts: centos_machine
+  become: true
+  roles:
+    - role: apache_centos
+      tags:
+        - apache_centos

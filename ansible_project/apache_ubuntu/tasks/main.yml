@@ -1,0 +1,9 @@
+---
+- name: Install Apache on Ubuntu
+  ansible.builtin.package:
+    name: apache2
+    state: present
+  ansible.builtin.copy:
+    src: templates/index.html.j2
+    dest: /var/www/html/index.html
+  notify: Restart Apache
